@@ -126,9 +126,9 @@ public class SnakePanel extends JPanel implements ActionListener{
 
 				else {
 
-					g.setColor(new Color(45,180,0));
+					//g.setColor(new Color(45,180,0));
 
-					//g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
+					g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
 
 					g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
 
@@ -299,6 +299,16 @@ public class SnakePanel extends JPanel implements ActionListener{
 		FontMetrics metrics2 = getFontMetrics(g.getFont());
 
 		g.drawString("Game Over", (SCREEN_WIDTH - metrics2.stringWidth("Game Over"))/2, SCREEN_HEIGHT/2);
+                
+                
+                // created by ansh
+                g.setColor(Color.red);
+
+		g.setFont( new Font("Ink Free",Font.BOLD, 75));
+
+		FontMetrics metrics3 = getFontMetrics(g.getFont());
+
+		g.drawString("Created by Ansh Rajpoot", (SCREEN_WIDTH - metrics3.stringWidth("Ansh Rajpoot"))/3, SCREEN_HEIGHT/3);
 
 	}
 
